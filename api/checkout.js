@@ -1,13 +1,10 @@
-const express = require('express');
-const cors = require('cors');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY || 'sk_test_MockStripeKey_Fallback');
 
-const app = express();
+module.exports = async function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method Not Allowed' });
+  }
 
-app.use(cors());
-app.use(express.json());
-
-app.post('/api/checkout', async (req, res) => {
   try {
     const { items } = req.body;
     
@@ -45,6 +42,4 @@ app.post('/api/checkout', async (req, res) => {
     console.error('Checkout error:', error);
     res.status(500).json({ error: error.message || 'Checkout session failed.' });
   }
-});
-
-module.exports = app;
+};
