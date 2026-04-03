@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse all product categories at Varsha Fancy Store — sarees, bangles, earrings, necklaces, hair accessories, bindis and more." />
+  <title>All Categories — Varsha Fancy Store</title>
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/utilities.css" />
+  <style>
+    .categories-hero-search {
+      max-width: 600px;
+      margin: var(--space-8) auto 0;
+    }
+    .categories-hero-search .search-bar__input {
+      height: 52px;
+      font-size: var(--text-base);
+      padding: 0 52px 0 52px;
+      background: rgba(255,255,255,0.15);
+      border-color: rgba(255,255,255,0.3);
+      color: white;
+    }
+    .categories-hero-search .search-bar__input::placeholder { color: rgba(255,255,255,0.6); }
+    .categories-hero-search .search-bar__input:focus {
+      background: rgba(255,255,255,0.25);
+      border-color: rgba(255,255,255,0.7);
+      box-shadow: 0 0 0 3px rgba(255,255,255,0.15);
+    }
+    .categories-hero-search .search-bar__icon { color: rgba(255,255,255,0.8); }
+
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-6);
+    }
+
+    .category-big-card {
+      border-radius: var(--radius-2xl);
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      text-decoration: none;
+      display: block;
+      transition: all var(--transition-base);
+      background: var(--color-bg-surface);
+      border: 1.5px solid var(--color-border);
+    }
+
+    .category-big-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-xl);
+      border-color: rgba(200,16,46,0.3);
+    }
+
+    .category-big-card__img-wrap {
+      aspect-ratio: 3/4;
+      overflow: hidden;
+    }
+
+    .category-big-card__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-slow);
+    }
+
+    .category-big-card:hover .category-big-card__img {
+      transform: scale(1.07);
+    }
+
+    .category-big-card__overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: var(--space-6);
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+    }
+
+    .category-big-card__name {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: white;
+      margin-bottom: 4px;
+    }
+
+    .category-big-card__count {
+      font-size: var(--text-sm);
+      color: rgba(255,255,255,0.75);
+    }
+
+    .category-big-card__arrow {
+      position: absolute;
+      top: var(--space-4);
+      right: var(--space-4);
+      width: 36px;
+      height: 36px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all var(--transition-base);
+    }
+
+    .category-big-card:hover .category-big-card__arrow {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    @media (max-width: 1280px) { .categories-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 1024px) { .categories-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px) { .categories-grid { grid-template-columns: 1fr 1fr; gap: var(--space-3); } }
+  </style>
+</head>
+<body>
+  <div id="announcement-bar" class="announcement-bar">
+    <span class="announcement-text"></span>
+  </div>
+  <header id="site-header" class="site-header"></header>
+  <nav id="mobile-nav" class="mobile-nav"></nav>
+  <div id="toast-container"></div>
+
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="page-hero" aria-label="Categories">
+      <div class="container">
+        <div class="page-hero__content">
+          <div class="page-hero__label">Explore Our Collection</div>
+          <h1 class="page-hero__title">Shop by Category</h1>
+          <p class="page-hero__subtitle">12 categories, 800+ products — find exactly what you're looking for</p>
+          <div class="categories-hero-search">
+            <div class="search-bar">
+              <svg class="search-bar__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+              <input id="cat-search" class="search-bar__input" type="search" placeholder="Search for a category..." aria-label="Search categories" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Grid -->
+    <section class="section" aria-labelledby="cats-grid-heading">
+      <div class="container">
+        <p id="cats-count" style="color:var(--color-text-secondary);font-size:var(--text-sm);margin-bottom:var(--space-6)">Showing all 12 categories</p>
+        <div class="categories-grid" id="categories-grid">
+          <!-- Populated by JS -->
+        </div>
+        <div id="cats-empty" class="empty-state" style="display:none">
+          <svg class="empty-state__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <h3 class="empty-state__title">No categories found</h3>
+          <p class="empty-state__subtitle">Try a different search term</p>
+          <button class="btn btn-outline" onclick="clearCatSearch()">Clear Search</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/categories.js"></script>
+</body>
+</html>
