@@ -136,21 +136,38 @@ function buildCheckoutMessage(items) {
   const waBtn = document.getElementById('checkout-wa-btn');
   if (!waBtn) return;
 
-  const state = Cart.getState();
-  let msg = `Hi! I'd like to place an order at Varsha Fancy Store:\n\n`;
+  // Change WhatsApp terminology to Secure Checkout
+  waBtn.textContent = 'Secure Checkout';
+  waBtn.onclick = async (e) => {
+    e.preventDefault();
+    waBtn.disabled = true;
+    waBtn.textContent = 'Processing...';
 
-  items.forEach((item, i) => {
-    msg += `${i + 1}. ${item.name}`;
-    if (item.variant) msg += ` (${Object.values(item.variant).join(', ')})`;
-    msg += ` x${item.qty} = ${formatPrice(item.price * item.qty)}\n`;
-  });
+    const state = Cart.getState();
+    const cartItems = state.items;
 
-  msg += `\nSubtotal: ${formatPrice(state.subtotal)}`;
-  msg += `\nShipping: ${state.shipping === 0 ? 'FREE' : formatPrice(state.shipping)}`;
-  msg += `\nTotal: ${formatPrice(state.total)}`;
-  msg += `\n\nPlease confirm availability and payment details. Thank you!`;
-
-  waBtn.href = `https://wa.me/${STORE_INFO.whatsapp}?text=${encodeURIComponent(msg)}`;
+    try {
+      const res = await fetch('/api/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ items: cartItems })
+      });
+      
+      const data = await res.json();
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        Toast.error('Checkout Error', data.error || 'Failed to start checkout securely.');
+        waBtn.disabled = false;
+        waBtn.textContent = 'Secure Checkout';
+      }
+    } catch (err) {
+      console.error(err);
+      Toast.error('Network Error', 'Could not reach secure server.');
+      waBtn.disabled = false;
+      waBtn.textContent = 'Secure Checkout';
+    }
+  };
 }
 
 function changeQty(uid, newQty) {
