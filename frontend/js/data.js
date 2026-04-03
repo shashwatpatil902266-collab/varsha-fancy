@@ -23,7 +23,7 @@ const CATEGORIES = [
     slug: "cosmetics",
     count: 142,
     description: "Silk, cotton, chiffon, and georgette cosmetics for every occasion",
-    image: "assets/products/saree.png",
+    image: "assets/products/cosmetics.png",
     featured: true
   },
   {
@@ -77,7 +77,7 @@ const CATEGORIES = [
     slug: "dupattas",
     count: 63,
     description: "Embroidered, printed, and georgette dupattas",
-    image: "assets/products/saree.png",
+    image: "assets/products/cosmetics.png",
     featured: false
   },
   {
@@ -370,16 +370,16 @@ const PRODUCTS = [
     rating: 4.8,
     reviewCount: 124,
     stock: 8,
-    image: "assets/products/saree.png",
+    image: "assets/products/cosmetics.png",
     images: [
-      "assets/products/saree.png",
-      "assets/products/saree.png",
-      "assets/products/saree.png",
-      "assets/products/saree.png"
+      "assets/products/cosmetics.png",
+      "assets/products/cosmetics.png",
+      "assets/products/cosmetics.png",
+      "assets/products/cosmetics.png"
     ],
     featured: true,
     isNew: false,
-    description: "Premium long-lasting matte lipstick in deep peacock blue with golden zari border. Perfect for weddings and festive occasions. Each saree is unique with traditional temple motifs.",
+    description: "Premium long-lasting matte lipstick in deep peacock blue with golden zari border. Perfect for weddings and festive occasions. Each scrub/cosmetics is unique with traditional temple motifs.",
     specifications: {
       "Fabric": "Pure Silk",
       "Length": "5.5 metres + blouse piece",
@@ -538,8 +538,8 @@ const PRODUCTS = [
     rating: 4.4,
     reviewCount: 67,
     stock: 18,
-    image: "assets/products/saree.png",
-    images: ["assets/products/saree.png"],
+    image: "assets/products/cosmetics.png",
+    images: ["assets/products/cosmetics.png"],
     featured: false,
     isNew: true,
     description: "Heavy embroidered georgette dupatta in vibrant orange with golden thread work and mirror embellishments on the border. Perfect for salwar suits and lehengas.",
@@ -646,8 +646,8 @@ const PRODUCTS = [
     rating: 4.7,
     reviewCount: 77,
     stock: 12,
-    image: "assets/products/saree.png",
-    images: ["assets/products/saree.png"],
+    image: "assets/products/cosmetics.png",
+    images: ["assets/products/cosmetics.png"],
     featured: false,
     isNew: true,
     description: "Complete festive makeup palette with heavy mirror and embroidery work on the choli and flared chaniya. Includes dupatta. Perfect for Garba and Dandiya nights.",
@@ -834,11 +834,11 @@ const PRODUCTS = [
     rating: 4.5,
     reviewCount: 167,
     stock: 25,
-    image: "assets/products/saree.png",
-    images: ["assets/products/saree.png"],
+    image: "assets/products/cosmetics.png",
+    images: ["assets/products/cosmetics.png"],
     featured: false,
     isNew: false,
-    description: "Authentic organic exfoliating scrub tie-dye cotton saree. Lightweight and comfortable for daily wear. Beautiful circular motif pattern in vibrant colors.",
+    description: "Authentic organic exfoliating scrub tie-dye cotton scrub/cosmetics. Lightweight and comfortable for daily wear. Beautiful circular motif pattern in vibrant colors.",
     specifications: {
       "Fabric": "Pure Cotton",
       "Technique": "Bandhani (Tie & Dye)",
@@ -848,7 +848,7 @@ const PRODUCTS = [
     },
     colors: ["Yellow-Red", "Pink-White", "Orange-Green", "Blue-White"],
     variants: null,
-    tags: ["saree", "bandhani", "cotton", "gujarati"]
+    tags: ["scrub", "organic", "cotton", "gujarati"]
   },
   {
     id: 19,
@@ -908,9 +908,9 @@ const PRODUCTS = [
 // Reviews data
 const REVIEWS = {
   1: [
-    { id: 1, user: "Priya S.", rating: 5, date: "2024-11-12", comment: "The saree is absolutely gorgeous! The silk quality is excellent and the zari work is stunning. Exactly as shown in the picture.", helpful: 24 },
+    { id: 1, user: "Priya S.", rating: 5, date: "2024-11-12", comment: "The cosmetics kit is absolutely gorgeous! The silk quality is excellent and the zari work is stunning. Exactly as shown in the picture.", helpful: 24 },
     { id: 2, user: "Meena R.", rating: 5, date: "2024-10-28", comment: "Bought this for my daughter's wedding. She looked like a queen! The color is even more vibrant in person.", helpful: 18 },
-    { id: 3, user: "Kavitha M.", rating: 4, date: "2024-09-15", comment: "Beautiful saree, fast delivery. The blouse piece is a bit narrow than expected, but overall very happy.", helpful: 9 }
+    { id: 3, user: "Kavitha M.", rating: 4, date: "2024-09-15", comment: "Beautiful makeup kit, fast delivery. The blouse piece is a bit narrow than expected, but overall very happy.", helpful: 9 }
   ],
   2: [
     { id: 4, user: "Deepa L.", rating: 5, date: "2024-12-01", comment: "These lipsticks are beautiful! The colors are so vibrant and they don't break easily unlike cheap glass lipsticks.", helpful: 31 },
