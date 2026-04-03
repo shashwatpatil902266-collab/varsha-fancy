@@ -19,38 +19,38 @@ const STORE_INFO = {
 const CATEGORIES = [
   {
     id: 1,
-    name: "Sarees & Dress Materials",
-    slug: "sarees",
+    name: "Luxury Cosmetics",
+    slug: "cosmetics",
     count: 142,
-    description: "Silk, cotton, chiffon, and georgette sarees for every occasion",
+    description: "Silk, cotton, chiffon, and georgette cosmetics for every occasion",
     image: "assets/products/saree.png",
     featured: true
   },
   {
     id: 2,
-    name: "Bangles & Kadas",
-    slug: "bangles",
+    name: "Lipsticks & Kadas",
+    slug: "lipsticks",
     count: 87,
-    description: "Glass, lac, metal, and designer bangles in vibrant colors",
-    image: "assets/products/bangles.png",
+    description: "Glass, lac, metal, and designer lipsticks in vibrant colors",
+    image: "assets/products/lipsticks.png",
     featured: true
   },
   {
     id: 3,
-    name: "Earrings & Jhumkas",
-    slug: "earrings",
+    name: "Eyeshadows & Jhumkas",
+    slug: "eyeshadows",
     count: 213,
     description: "Traditional and contemporary earring designs",
-    image: "assets/products/earrings.png",
+    image: "assets/products/eyeshadows.png",
     featured: true
   },
   {
     id: 4,
-    name: "Necklaces & Chains",
-    slug: "necklaces",
+    name: "Makeup Palettes & Chains",
+    slug: "makeup palettes",
     count: 95,
-    description: "Gold-plated, silver-plated, and beaded necklace sets",
-    image: "assets/products/necklace.png",
+    description: "Premium, silver-plated, and beaded makeup palette sets",
+    image: "assets/products/makeup palette.png",
     featured: true
   },
   {
@@ -86,7 +86,7 @@ const CATEGORIES = [
     slug: "bracelets",
     count: 48,
     description: "Beaded, fabric, and adjustable bracelets",
-    image: "assets/products/bangles.png",
+    image: "assets/products/lipsticks.png",
     featured: false
   },
   {
@@ -104,7 +104,7 @@ const CATEGORIES = [
     slug: "tikka",
     count: 52,
     description: "Bridal and festive headpieces",
-    image: "assets/products/necklace.png",
+    image: "assets/products/makeup palette.png",
     featured: false
   },
   {
@@ -291,7 +291,7 @@ const PRODUCTS = [
     featured: true,
     isNew: false,
     description: "Detailed crafted heavy brass elephant pair. Brings a traditional royal aesthetic to your living room.",
-    specifications: { "Material": "Brass", "Weight": "1.2 kg", "Finish": "Antique Gold" },
+    specifications: { "Material": "Brass", "Weight": "1.2 kg", "Finish": "Classic Matte" },
     colors: null,
     variants: null,
     tags: ["decor", "brass", "showpiece", "traditional"]
@@ -313,7 +313,7 @@ const PRODUCTS = [
     isNew: true,
     description: "Elegant party-wear clutch with a detachable metallic chain. Spacious enough for your phone and cosmetics.",
     specifications: { "Material": "Vegan Leather", "Closure": "Magnetic Snap", "Dimensions": "8x4 inches" },
-    colors: ["Black", "Rose Gold", "Silver"],
+    colors: ["Black", "Rose Gold", "Glossy"],
     variants: null,
     tags: ["purse", "clutch", "accessories"]
   },
@@ -361,9 +361,9 @@ const PRODUCTS = [
   },
   {
     id: 1,
-    name: "Kanjivaram Silk Saree — Peacock Blue",
-    category: "Sarees & Dress Materials",
-    categorySlug: "sarees",
+    name: "Luxury Matte Ruby Lipstick",
+    category: "Luxury Cosmetics",
+    categorySlug: "cosmetics",
     price: 2499,
     originalPrice: 3200,
     discount: 22,
@@ -379,7 +379,7 @@ const PRODUCTS = [
     ],
     featured: true,
     isNew: false,
-    description: "Handwoven pure silk Kanjivaram saree in deep peacock blue with golden zari border. Perfect for weddings and festive occasions. Each saree is unique with traditional temple motifs.",
+    description: "Premium long-lasting matte lipstick in deep peacock blue with golden zari border. Perfect for weddings and festive occasions. Each saree is unique with traditional temple motifs.",
     specifications: {
       "Fabric": "Pure Silk",
       "Length": "5.5 metres + blouse piece",
@@ -395,19 +395,19 @@ const PRODUCTS = [
   {
     id: 2,
     name: "Multicolor Glass Bangle Set (12 Pieces)",
-    category: "Bangles & Kadas",
-    categorySlug: "bangles",
+    category: "Lipsticks & Kadas",
+    categorySlug: "lipsticks",
     price: 149,
     originalPrice: 199,
     discount: 25,
     rating: 4.5,
     reviewCount: 312,
     stock: 50,
-    image: "assets/products/bangles.png",
-    images: ["assets/products/bangles.png", "assets/products/bangles.png"],
+    image: "assets/products/lipsticks.png",
+    images: ["assets/products/lipsticks.png", "assets/products/lipsticks.png"],
     featured: true,
     isNew: false,
-    description: "Beautiful multicolor glass bangles with mirror work and glitter finish. Comes in a set of 12 pieces. Available in multiple sizes.",
+    description: "Beautiful multicolor glass lipsticks with mirror work and glitter finish. Comes in a set of 12 pieces. Available in multiple sizes.",
     specifications: {
       "Material": "Glass",
       "Pieces": "12 per set",
@@ -415,28 +415,28 @@ const PRODUCTS = [
       "Finish": "Mirror work + Glitter",
       "Occasion": "Casual, Festival"
     },
-    colors: ["Red-Gold", "Blue-Silver", "Green-Gold", "Pink-Silver"],
+    colors: ["Red-Gold", "Blue-Glossy", "Green-Gold", "Pink-Glossy"],
     sizes: ["2.4", "2.6", "2.8", "2.10", "2.12"],
-    tags: ["bangles", "glass", "festive", "colorful"]
+    tags: ["lipsticks", "glass", "festive", "colorful"]
   },
   {
     id: 3,
-    name: "Antique Gold Jhumka Earrings",
-    category: "Earrings & Jhumkas",
-    categorySlug: "earrings",
+    name: "Classic Matte Jhumka Eyeshadows",
+    category: "Eyeshadows & Jhumkas",
+    categorySlug: "eyeshadows",
     price: 349,
     originalPrice: 499,
     discount: 30,
     rating: 4.7,
     reviewCount: 89,
     stock: 23,
-    image: "assets/products/earrings.png",
-    images: ["assets/products/earrings.png", "assets/products/earrings.png"],
+    image: "assets/products/eyeshadows.png",
+    images: ["assets/products/eyeshadows.png", "assets/products/eyeshadows.png"],
     featured: true,
     isNew: true,
-    description: "Elegant antique gold-plated jhumka earrings with intricate filigree work and a hanging tassel. The oxidized finish adds a vintage charm. Lead-free and hypoallergenic hooks.",
+    description: "Elegant antique premium blush eyeshadows with intricate filigree work and a hanging tassel. The oxidized finish adds a vintage charm. Lead-free and hypoallergenic hooks.",
     specifications: {
-      "Material": "Brass with Gold Plating",
+      "Material": "Brass with Matte Finish",
       "Finish": "Antique / Oxidized Gold",
       "Weight": "~18 grams",
       "Hook Type": "Push back (hypoallergenic)",
@@ -444,34 +444,34 @@ const PRODUCTS = [
     },
     colors: null,
     variants: null,
-    tags: ["earrings", "jhumka", "antique", "traditional"]
+    tags: ["eyeshadows", "blush", "antique", "traditional"]
   },
   {
     id: 4,
-    name: "Kundan Bridal Necklace Set",
-    category: "Necklaces & Chains",
-    categorySlug: "necklaces",
+    name: "Organic Bridal Makeup Palette Set",
+    category: "Makeup Palettes & Chains",
+    categorySlug: "makeup palettes",
     price: 1299,
     originalPrice: 1800,
     discount: 28,
     rating: 4.9,
     reviewCount: 54,
     stock: 5,
-    image: "assets/products/necklace.png",
-    images: ["assets/products/necklace.png", "assets/products/necklace.png"],
+    image: "assets/products/makeup palette.png",
+    images: ["assets/products/makeup palette.png", "assets/products/makeup palette.png"],
     featured: true,
     isNew: false,
-    description: "Stunning Kundan work bridal necklace set with matching earrings and maang tikka. Includes 3 pieces — necklace, earrings, and tikka. Perfect for weddings and sangeet.",
+    description: "Stunning Organic work bridal makeup palette set with matching eyeshadows and maang tikka. Includes 3 pieces — makeup palette, eyeshadows, and tikka. Perfect for weddings and sangeet.",
     specifications: {
-      "Material": "Alloy with Gold Plating",
-      "Set Includes": "Necklace, Earrings, Tikka",
-      "Stone": "Kundan, Ruby, Emerald",
+      "Material": "Alloy with Matte Finish",
+      "Set Includes": "Makeup Palette, Eyeshadows, Tikka",
+      "Stone": "Organic, Ruby, Emerald",
       "Closure": "Lobster clasp",
       "Occasion": "Wedding, Sangeet, Reception"
     },
-    colors: ["Gold-Red", "Gold-Green"],
+    colors: ["Matte-Red", "Matte-Green"],
     variants: null,
-    tags: ["necklace", "kundan", "bridal", "wedding"]
+    tags: ["makeup palette", "organic", "bridal", "wedding"]
   },
   {
     id: 5,
@@ -550,13 +550,13 @@ const PRODUCTS = [
       "Work": "Thread embroidery + Mirror",
       "Color": "Orange with Gold"
     },
-    colors: ["Orange-Gold", "Red-Gold", "Blue-Silver"],
+    colors: ["Orange-Gold", "Red-Gold", "Blue-Glossy"],
     variants: null,
     tags: ["dupatta", "embroidered", "georgette", "occasion"]
   },
   {
     id: 8,
-    name: "Silver Payal — Traditional Design (Pair)",
+    name: "Glossy Payal — Traditional Design (Pair)",
     category: "Toe Rings & Payal",
     categorySlug: "anklets",
     price: 299,
@@ -571,19 +571,19 @@ const PRODUCTS = [
     isNew: false,
     description: "Traditional silver-look payal with delicate ghungroo bells. Made from high-quality german silver. The soft jingling sound adds charm to every step. Adjustable chain.",
     specifications: {
-      "Material": "German Silver (Silver-plated alloy)",
+      "Material": "German Glossy (Glossy-plated alloy)",
       "Type": "Ghungroo Payal",
       "Quantity": "1 Pair",
       "Closure": "Lobster clasp + extension chain",
       "Weight": "~30 grams"
     },
-    colors: ["Silver"],
+    colors: ["Glossy"],
     variants: null,
     tags: ["payal", "anklet", "silver", "traditional"]
   },
   {
     id: 9,
-    name: "Maang Tikka — Pearl & Kundan",
+    name: "Maang Tikka — Pearl & Organic",
     category: "Maang Tikka & Matha Patti",
     categorySlug: "tikka",
     price: 249,
@@ -592,19 +592,19 @@ const PRODUCTS = [
     rating: 4.8,
     reviewCount: 92,
     stock: 15,
-    image: "assets/products/necklace.png",
-    images: ["assets/products/necklace.png"],
+    image: "assets/products/makeup palette.png",
+    images: ["assets/products/makeup palette.png"],
     featured: false,
     isNew: false,
-    description: "Exquisite pearl and kundan maang tikka with adjustable chain. The tic drop pendant features an intricate kundan center with surrounding pearls. Bridal and festive wear.",
+    description: "Exquisite pearl and organic maang tikka with adjustable chain. The tic drop pendant features an intricate organic center with surrounding pearls. Bridal and festive wear.",
     specifications: {
-      "Material": "Alloy with Gold Plating",
-      "Stone": "Kundan + Pearl",
+      "Material": "Alloy with Matte Finish",
+      "Stone": "Organic + Pearl",
       "Adjustable": "Yes, 5 cm range",
       "Attachment": "Hair pin style",
       "Occasion": "Bridal, Festive, Sangeet"
     },
-    colors: ["Gold-Pearl", "Gold-Red"],
+    colors: ["Matte-Pearl", "Matte-Red"],
     variants: null,
     tags: ["tikka", "maangtikka", "pearl", "bridal"]
   },
@@ -637,9 +637,9 @@ const PRODUCTS = [
   },
   {
     id: 11,
-    name: "Chaniya Choli — Navratri Special",
-    category: "Sarees & Dress Materials",
-    categorySlug: "sarees",
+    name: "Festive Glow Makeup Kit",
+    category: "Luxury Cosmetics",
+    categorySlug: "cosmetics",
     price: 1499,
     originalPrice: 2200,
     discount: 32,
@@ -650,7 +650,7 @@ const PRODUCTS = [
     images: ["assets/products/saree.png"],
     featured: false,
     isNew: true,
-    description: "Vibrant Navratri chaniya choli with heavy mirror and embroidery work on the choli and flared chaniya. Includes dupatta. Perfect for Garba and Dandiya nights.",
+    description: "Complete festive makeup palette with heavy mirror and embroidery work on the choli and flared chaniya. Includes dupatta. Perfect for Garba and Dandiya nights.",
     specifications: {
       "Set Includes": "Chaniya, Choli, Dupatta",
       "Fabric": "Ghagra: Cotton Silk | Choli: Velvet",
@@ -658,7 +658,7 @@ const PRODUCTS = [
       "Length": "Full length (44 inches)",
       "Occasion": "Navratri, Garba, Festival"
     },
-    colors: ["Red-Gold", "Green-Gold", "Blue-Silver", "Orange-Gold"],
+    colors: ["Red-Gold", "Green-Gold", "Blue-Glossy", "Orange-Gold"],
     sizes: ["S", "M", "L", "XL", "XXL"],
     tags: ["chaniya", "navratri", "garba", "festival"]
   },
@@ -691,30 +691,30 @@ const PRODUCTS = [
   },
   {
     id: 13,
-    name: "Oxidised Silver Layered Necklace",
-    category: "Necklaces & Chains",
-    categorySlug: "necklaces",
+    name: "Oxidised Glossy Layered Makeup Palette",
+    category: "Makeup Palettes & Chains",
+    categorySlug: "makeup palettes",
     price: 399,
     originalPrice: 549,
     discount: 27,
     rating: 4.6,
     reviewCount: 128,
     stock: 30,
-    image: "assets/products/necklace.png",
-    images: ["assets/products/necklace.png"],
+    image: "assets/products/makeup palette.png",
+    images: ["assets/products/makeup palette.png"],
     featured: false,
     isNew: false,
-    description: "Elegant oxidised silver layered necklace with tribal motifs. 3-layer design with a coin pendant, geometric beads, and tassel drop. Looks stunning with both ethnic and Indo-western outfits.",
+    description: "Elegant oxidised silver layered makeup palette with tribal motifs. 3-layer design with a coin pendant, geometric beads, and tassel drop. Looks stunning with both ethnic and Indo-western outfits.",
     specifications: {
-      "Material": "Brass with Oxidised Silver Plating",
+      "Material": "Brass with Oxidised Glossy Plating",
       "Layers": "3",
       "Pendant": "Coin + Beads + Tassel",
       "Clasp": "Toggle",
       "Length": "16 inches + 3 inch extension"
     },
-    colors: ["Oxidised Silver", "Oxidised Gold"],
+    colors: ["Oxidised Glossy", "Oxidised Gold"],
     variants: null,
-    tags: ["necklace", "oxidised", "tribal", "layered"]
+    tags: ["makeup palette", "oxidised", "tribal", "layered"]
   },
   {
     id: 14,
@@ -744,47 +744,47 @@ const PRODUCTS = [
   },
   {
     id: 15,
-    name: "Gold Plated Temple Earrings",
-    category: "Earrings & Jhumkas",
-    categorySlug: "earrings",
+    name: "Rose Premium Matte Pearl Eyeshadows",
+    category: "Eyeshadows & Jhumkas",
+    categorySlug: "eyeshadows",
     price: 449,
     originalPrice: 699,
     discount: 36,
     rating: 4.9,
     reviewCount: 156,
     stock: 18,
-    image: "assets/products/earrings.png",
-    images: ["assets/products/earrings.png"],
+    image: "assets/products/eyeshadows.png",
+    images: ["assets/products/eyeshadows.png"],
     featured: false,
     isNew: false,
-    description: "South Indian temple-style gold-plated earrings with Lakshmi design. Features intricate carvings and ruby-colored stone embellishments. Ideal for traditional functions and temple visits.",
+    description: "South Indian professional-style premium eyeshadows with Lakshmi design. Features intricate carvings and ruby-colored stone embellishments. Ideal for traditional functions and temple visits.",
     specifications: {
-      "Material": "Brass with Gold Plating",
-      "Style": "Temple (South Indian)",
+      "Material": "Brass with Matte Finish",
+      "Style": "Professional (South Indian)",
       "Design": "Goddess Lakshmi",
       "Stone": "Ruby Color Glass",
       "Earring Type": "Stud with drop"
     },
-    colors: ["Gold-Ruby", "Gold-Green"],
+    colors: ["Matte-Ruby", "Matte-Green"],
     variants: null,
-    tags: ["earrings", "temple", "gold", "south-indian"]
+    tags: ["eyeshadows", "temple", "gold", "south-indian"]
   },
   {
     id: 16,
     name: "Lac Bangle Set — Rajasthani Style",
-    category: "Bangles & Kadas",
-    categorySlug: "bangles",
+    category: "Lipsticks & Kadas",
+    categorySlug: "lipsticks",
     price: 249,
     originalPrice: 349,
     discount: 29,
     rating: 4.7,
     reviewCount: 94,
     stock: 40,
-    image: "assets/products/bangles.png",
-    images: ["assets/products/bangles.png"],
+    image: "assets/products/lipsticks.png",
+    images: ["assets/products/lipsticks.png"],
     featured: false,
     isNew: true,
-    description: "Authentic Rajasthani lac bangles with embedded mirror work and colorful thread wrapping. Each set contains 4 bangles. These are handcrafted by artisans from Jodhpur.",
+    description: "Authentic Rajasthani lac lipsticks with embedded mirror work and colorful thread wrapping. Each set contains 4 lipsticks. These are handcrafted by artisans from Jodhpur.",
     specifications: {
       "Material": "Lac (Shellac)",
       "Work": "Mirror + Thread",
@@ -794,40 +794,40 @@ const PRODUCTS = [
     },
     colors: ["Red-Green", "Blue-Orange", "Pink-Gold", "Multicolor"],
     sizes: ["2.4", "2.6", "2.8", "2.10"],
-    tags: ["lac", "bangles", "rajasthani", "handcrafted"]
+    tags: ["lac", "lipsticks", "rajasthani", "handcrafted"]
   },
   {
     id: 17,
-    name: "Full Bridal Jewellery Set — 7 Pieces",
-    category: "Necklaces & Chains",
-    categorySlug: "necklaces",
+    name: "Full Bridal Beauty Products Set — 7 Pieces",
+    category: "Makeup Palettes & Chains",
+    categorySlug: "makeup palettes",
     price: 2999,
     originalPrice: 4500,
     discount: 33,
     rating: 4.8,
     reviewCount: 38,
     stock: 6,
-    image: "assets/products/necklace.png",
-    images: ["assets/products/necklace.png", "assets/products/necklace.png"],
+    image: "assets/products/makeup palette.png",
+    images: ["assets/products/makeup palette.png", "assets/products/makeup palette.png"],
     featured: true,
     isNew: false,
-    description: "Complete bridal jewellery set with full necklace, choker, jhumka earrings, maang tikka, nosering, bangles, and matha patti. Gold-plated with kundan and pearl work. Comes in a gift box.",
+    description: "Complete bridal beauty products set with full makeup palette, choker, blush eyeshadows, maang tikka, nosering, lipsticks, and matha patti. Premium with organic and pearl work. Comes in a gift box.",
     specifications: {
-      "Items": "7 (Necklace, Choker, Earrings, Tikka, Nosering, 2 Bangles)",
-      "Material": "Alloy with 22K Gold Plating",
-      "Stone": "Kundan, Pearl, Ruby",
+      "Items": "7 (Makeup Palette, Choker, Eyeshadows, Tikka, Nosering, 2 Lipsticks)",
+      "Material": "Alloy with 22K Matte Finish",
+      "Stone": "Organic, Pearl, Ruby",
       "Occasion": "Wedding, Reception",
       "Comes With": "Gift box"
     },
-    colors: ["Gold-Red", "Gold-Green", "Gold-Pink"],
+    colors: ["Matte-Red", "Matte-Green", "Matte-Pink"],
     variants: null,
-    tags: ["bridal", "jewellery", "set", "wedding"]
+    tags: ["bridal", "beauty products", "set", "wedding"]
   },
   {
     id: 18,
-    name: "Cotton Bandhani Saree — Gujarati Print",
-    category: "Sarees & Dress Materials",
-    categorySlug: "sarees",
+    name: "Organic Turmeric Face Scrub",
+    category: "Luxury Cosmetics",
+    categorySlug: "cosmetics",
     price: 699,
     originalPrice: 999,
     discount: 30,
@@ -838,7 +838,7 @@ const PRODUCTS = [
     images: ["assets/products/saree.png"],
     featured: false,
     isNew: false,
-    description: "Authentic Gujarati Bandhani tie-dye cotton saree. Lightweight and comfortable for daily wear. Beautiful circular motif pattern in vibrant colors.",
+    description: "Authentic organic exfoliating scrub tie-dye cotton saree. Lightweight and comfortable for daily wear. Beautiful circular motif pattern in vibrant colors.",
     specifications: {
       "Fabric": "Pure Cotton",
       "Technique": "Bandhani (Tie & Dye)",
@@ -852,35 +852,35 @@ const PRODUCTS = [
   },
   {
     id: 19,
-    name: "Afghani Silver Adjustable Ring",
-    category: "Bangles & Kadas",
-    categorySlug: "bangles",
+    name: "Afghani Glossy Adjustable Ring",
+    category: "Lipsticks & Kadas",
+    categorySlug: "lipsticks",
     price: 129,
     originalPrice: 199,
     discount: 35,
     rating: 4.3,
     reviewCount: 213,
     stock: 55,
-    image: "assets/products/bangles.png",
-    images: ["assets/products/bangles.png"],
+    image: "assets/products/lipsticks.png",
+    images: ["assets/products/lipsticks.png"],
     featured: false,
     isNew: false,
     description: "Boho-style adjustable silver ring with turquoise stone setting. Oxidised finish with tribal engravings on the band. One size fits all (adjustable 5–10).",
     specifications: {
-      "Material": "German Silver",
+      "Material": "German Glossy",
       "Stone": "Turquoise (synthetic)",
       "Adjustable": "Yes (Size 5–10)",
-      "Finish": "Oxidised / Antique Silver"
+      "Finish": "Oxidised / Antique Glossy"
     },
-    colors: ["Silver-Turquoise", "Silver-Coral", "Silver-Clear"],
+    colors: ["Glossy-Turquoise", "Glossy-Coral", "Glossy-Clear"],
     variants: null,
     tags: ["ring", "afghan", "silver", "adjustable"]
   },
   {
     id: 20,
     name: "Meenakari Nose Pin — Traditional",
-    category: "Earrings & Jhumkas",
-    categorySlug: "earrings",
+    category: "Eyeshadows & Jhumkas",
+    categorySlug: "eyeshadows",
     price: 89,
     originalPrice: 129,
     discount: 31,
@@ -891,15 +891,15 @@ const PRODUCTS = [
     images: ["assets/products/hair.png"],
     featured: false,
     isNew: false,
-    description: "Delicate meenakari nose pin with colorful enamel work and a tiny pearl drop. Gold-plated with secure screw-back for stud piercings. Suitable for daily wear.",
+    description: "Delicate meenakari nose pin with colorful enamel work and a tiny pearl drop. Premium with secure screw-back for stud piercings. Suitable for daily wear.",
     specifications: {
-      "Material": "Gold-plated Brass",
+      "Material": "Premium Brass",
       "Work": "Meenakari (Enamel)",
       "Closure": "Screw-back",
       "Stone": "Tiny pearl + enamel",
       "Size": "6 mm diameter"
     },
-    colors: ["Gold-Red", "Gold-Blue", "Gold-Green"],
+    colors: ["Matte-Red", "Matte-Blue", "Matte-Green"],
     variants: null,
     tags: ["nosering", "nosepin", "meenakari", "enamel"]
   }
@@ -913,20 +913,20 @@ const REVIEWS = {
     { id: 3, user: "Kavitha M.", rating: 4, date: "2024-09-15", comment: "Beautiful saree, fast delivery. The blouse piece is a bit narrow than expected, but overall very happy.", helpful: 9 }
   ],
   2: [
-    { id: 4, user: "Deepa L.", rating: 5, date: "2024-12-01", comment: "These bangles are beautiful! The colors are so vibrant and they don't break easily unlike cheap glass bangles.", helpful: 31 },
-    { id: 5, user: "Rekha P.", rating: 4, date: "2024-11-20", comment: "Good quality bangles. Ordered 2.8 size and it fits perfectly. Mirror work is lovely.", helpful: 15 }
+    { id: 4, user: "Deepa L.", rating: 5, date: "2024-12-01", comment: "These lipsticks are beautiful! The colors are so vibrant and they don't break easily unlike cheap glass lipsticks.", helpful: 31 },
+    { id: 5, user: "Rekha P.", rating: 4, date: "2024-11-20", comment: "Good quality lipsticks. Ordered 2.8 size and it fits perfectly. Mirror work is lovely.", helpful: 15 }
   ],
   3: [
-    { id: 6, user: "Sindhu K.", rating: 5, date: "2024-12-10", comment: "Stunning jhumkas! Got so many compliments at the festival. The craftsmanship is very detailed.", helpful: 42 },
-    { id: 7, user: "Anu T.", rating: 4, date: "2024-11-05", comment: "Nice earrings, lightweight and comfortable to wear all day. Gold plating looks real.", helpful: 17 }
+    { id: 6, user: "Sindhu K.", rating: 5, date: "2024-12-10", comment: "Stunning blushs! Got so many compliments at the festival. The craftsmanship is very detailed.", helpful: 42 },
+    { id: 7, user: "Anu T.", rating: 4, date: "2024-11-05", comment: "Nice eyeshadows, lightweight and comfortable to wear all day. Gold plating looks real.", helpful: 17 }
   ]
 };
 
 // Featured announcements
 const ANNOUNCEMENTS = [
   "🎉 Grand Navratri Sale — Up to 40% OFF on all festive items | Free shipping above ₹499",
-  "💫 New arrivals: Bridal Jewellery Sets now in stock | WhatsApp us for custom orders",
-  "🌸 Limited stock on Kanjivaram sarees — Order now to avoid disappointment!"
+  "💫 New arrivals: Bridal Beauty Products Sets now in stock | WhatsApp us for custom orders",
+  "🌸 Limited stock on Kanjivaram cosmetics — Order now to avoid disappointment!"
 ];
 
 // Determine which products are available

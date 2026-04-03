@@ -155,7 +155,7 @@ function renderHeader(activePage = '') {
             id="header-search" 
             class="search-bar__input" 
             type="search" 
-            placeholder="Search sarees, bangles, earrings..." 
+            placeholder="Search cosmetics, skincare, lipsticks..." 
             aria-label="Search products"
             autocomplete="off"
           />
@@ -354,7 +354,7 @@ function renderFooter() {
             <img src="assets/store/logo.png" alt="Varsha Fancy Store" class="footer__logo-img" width="160" height="54" style="object-fit: contain; transform: scale(1.2); transform-origin: left center;" />
           </div>
           <p class="footer__desc">
-            A 16-year legacy of bringing joy through beautiful ethnic accessories, sarees, and jewellery. 
+            A 16-year legacy of bringing joy through beautiful ethnic accessories, premium cosmetics, and skincare products. 
             Rooted in tradition, loved by thousands of happy customers across Chennai and beyond.
           </p>
           <div class="footer__social">
@@ -385,8 +385,8 @@ function renderFooter() {
         <div>
           <h3 class="footer__col-title">Categories</h3>
           <ul class="footer__links">
-            <li><a href="products.html?cat=sarees" class="footer__link">Sarees & Materials</a></li>
-            <li><a href="products.html?cat=bangles" class="footer__link">Bangles & Kadas</a></li>
+            <li><a href="products.html?cat=cosmetics" class="footer__link">Luxury Cosmetics</a></li>
+            <li><a href="products.html?cat=lipsticks" class="footer__link">Lipsticks & Kadas</a></li>
             <li><a href="products.html?cat=cosmetics" class="footer__link">Premium Cosmetics</a></li>
             <li><a href="products.html?cat=facecare" class="footer__link">Organic Face Care</a></li>
             <li><a href="products.html?cat=gifts" class="footer__link">Gifts & Hampers</a></li>

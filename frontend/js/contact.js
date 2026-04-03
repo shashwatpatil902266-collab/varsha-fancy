@@ -9,7 +9,7 @@ const FAQS = [
   },
   {
     q: 'What is your return policy?',
-    a: 'We offer a 7-day hassle-free return policy for unused items in their original packaging. Sarees and custom orders may have different policies. Contact us on WhatsApp to initiate a return.'
+    a: 'We offer a 7-day hassle-free return policy for unused items in their original packaging. Custom orders may have different policies. Contact us on WhatsApp to initiate a return.'
   },
   {
     q: 'Can I order custom or bulk quantities?',
