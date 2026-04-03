@@ -1,0 +1,145 @@
+/* ============================================
+   VARSHA FANCY STORE — Design System Variables
+   Stitch Design: Heritage & Heart
+   Project: stitch.withgoogle.com/projects/4605842261219164173
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* ─── Brand Colors (Stitch: Heritage & Heart palette) ─── */
+  --color-primary: #8a4853;
+  --color-primary-hover: #70343e;
+  --color-primary-dark: #3a0915;
+  --color-primary-light: #ffd9dd;
+  --color-primary-container: #a6606b;
+
+  --color-secondary: #685d4a;
+  --color-secondary-container: #eddec5;
+  --color-secondary-on: #6c614e;
+
+  --color-tertiary: #25D366;
+  --color-tertiary-dark: #006b2e;
+
+  /* ─── Surface Tonal Layers (No-Line Rule — use these instead of borders) ─── */
+  --color-surface: #fbf9f5;                 /* Page canvas — Level 0 */
+  --color-surface-low: #f5f3ef;             /* In-page sections — Level 1 */
+  --color-surface-lowest: #ffffff;          /* Cards — Level 2 */
+  --color-surface-high: #eae8e4;            /* Inputs (recessed look) */
+  --color-surface-highest: #e4e2de;         /* Highest container */
+  --color-surface-bright: #fbf9f5;
+  --color-surface-dim: #dbdad6;
+
+  /* Legacy aliases (for backwards compat with existing component refs) */
+  --color-bg-page: var(--color-surface-lowest);
+  --color-bg-surface: var(--color-surface-low);
+  --color-bg-dark: #1b1c1a;
+  --color-bg-dark-2: #30312e;
+
+  /* ─── Text ─── */
+  --color-text-primary: #1b1c1a;            /* Deep Charcoal — no pure black */
+  --color-text-secondary: #524345;          /* on_surface_variant */
+  --color-text-disabled: #857374;           /* outline */
+  --color-text-inverse: #ffffff;
+
+  /* ─── Borders (Ghost borders only — use at 20% opacity) ─── */
+  --color-border: rgba(215, 193, 195, 0.45); /* outline_variant at ~45% */
+  --color-border-hover: #d7c1c3;             /* outline_variant full */
+  --color-outline: #857374;
+
+  /* ─── Semantic Colors ─── */
+  --color-success: #006b2e;
+  --color-success-light: #f7fff3;
+  --color-success-border: #66ff8e;
+
+  --color-error: #ba1a1a;
+  --color-error-light: #ffdad6;
+  --color-error-border: #93000a;
+
+  --color-warning: #D97706;
+  --color-warning-light: #FFFBEB;
+  --color-warning-border: #FCD34D;
+
+  --color-info: #2563EB;
+  --color-info-light: #EFF6FF;
+
+  /* ─── Gradients ─── */
+  --gradient-hero: linear-gradient(135deg, #8a4853 0%, #a6606b 60%, #c4856e 100%);
+  --gradient-hero-2: linear-gradient(160deg, #3a0915 0%, #8a4853 50%, #eddec5 100%);
+  --gradient-primary: linear-gradient(135deg, #8a4853 0%, #a6606b 100%);
+  --gradient-gold: linear-gradient(135deg, #8a4853 0%, #c4856e 50%, #eddec5 100%);
+  --gradient-card: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(58,9,21,0.65) 100%);
+  --gradient-crimson: var(--gradient-primary);
+
+  /* ─── Typography — Stitch spec ─── */
+  --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --text-xs: 0.75rem;     /* 12px */
+  --text-sm: 0.875rem;    /* 14px */
+  --text-base: 1rem;      /* 16px */
+  --text-lg: 1.125rem;    /* 18px */
+  --text-xl: 1.25rem;     /* 20px */
+  --text-2xl: 1.5rem;     /* 24px */
+  --text-3xl: 1.875rem;   /* 30px */
+  --text-4xl: 2.25rem;    /* 36px */
+  --text-5xl: 3rem;       /* 48px */
+  --text-6xl: 3.75rem;    /* 60px */
+
+  /* ─── Spacing (Base-8) ─── */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* ─── Layout ─── */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1440px;
+
+  /* ─── Border Radius (Stitch: round-8 system) ─── */
+  --radius-sm: 4px;
+  --radius-md: 8px;       /* Primary radius — used everywhere */
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-full: 9999px;
+
+  /* ─── Shadows (Tonal, not colored) ─── */
+  /* Stitch: "Ambient Shadows" — on_surface at 6% opacity */
+  --shadow-sm: 0 1px 4px rgba(27, 28, 26, 0.04);
+  --shadow-md: 0 4px 12px rgba(27, 28, 26, 0.06);
+  --shadow-lg: 0 8px 24px rgba(27, 28, 26, 0.08);
+  --shadow-xl: 0 12px 32px rgba(51, 51, 51, 0.06);   /* Stitch ambient shadow */
+  --shadow-card-hover: 0 8px 28px rgba(138, 72, 83, 0.12);
+  --shadow-primary: 0 4px 16px rgba(138, 72, 83, 0.28);
+  --shadow-gold: 0 4px 16px rgba(196, 133, 110, 0.28);
+  --shadow-whatsapp: 0 12px 32px rgba(51, 51, 51, 0.06);
+
+  /* ─── Transitions ─── */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  /* ─── Z-Index ─── */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+
+  /* ─── Header Height ─── */
+  --header-height: 64px;
+  --announcement-height: 40px;
+}
