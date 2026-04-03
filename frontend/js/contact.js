@@ -129,26 +129,16 @@ function setupContactForm() {
 
     if (!valid) return;
 
-    // Simulate submission
-    const btn = document.getElementById('contact-submit-btn');
-    btn.disabled = true;
-    btn.innerHTML = `
-      <svg class="spin" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
-      </svg>
-      Sending...
-    `;
+    // Build WhatsApp message
+    const subjectEl = document.getElementById('c-subject');
+    const subject = subjectEl.options[subjectEl.selectedIndex].text || 'General Enquiry';
+    const waMsg = `Hello Varsha Store, I have an inquiry:%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Subject:* ${subject}%0A%0A*Message:*%0A${message}`;
 
-    setTimeout(() => {
-      document.getElementById('form-success').style.display = 'block';
-      form.reset();
-      btn.disabled = false;
-      btn.innerHTML = `
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
-        </svg>
-        Send Message
-      `;
-    }, 1500);
+    // Redirect to WhatsApp
+    const phone = typeof STORE_INFO !== 'undefined' ? STORE_INFO.whatsapp : '919131902266';
+    window.open(`https://wa.me/${phone}?text=${waMsg.replace(/\n/g, '%0A')}`, '_blank');
+
+    document.getElementById('form-success').style.display = 'block';
+    form.reset();
   });
 }

@@ -143,7 +143,7 @@ function renderHeader(activePage = '') {
   headerEl.innerHTML = `
     <div class="header__inner">
       <a href="index.html" class="header__logo" aria-label="Varsha Fancy Store - Home">
-        <img src="assets/images/logo.png" alt="Varsha Fancy Store" class="header__logo-img" width="140" height="48" style="object-fit: contain; transform: scale(1.4); transform-origin: left center;" />
+        <img src="assets/store/logo.png" alt="Varsha Fancy Store" class="header__logo-img" width="140" height="48" style="object-fit: contain; transform: scale(1.4); transform-origin: left center;" />
       </a>
 
       <div class="header__search">
@@ -176,6 +176,12 @@ function renderHeader(activePage = '') {
       </nav>
 
       <div class="header__actions">
+        <button class="header__action-btn" id="account-btn" aria-label="My Account" onclick="openAccountModal()">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z"/>
+          </svg>
+        </button>
+
         <a href="cart.html" class="header__action-btn" id="cart-btn" aria-label="View cart">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
@@ -292,7 +298,8 @@ function renderMobileNav(activePage = '') {
     { href: 'products.html', label: '🛍️ All Products', id: 'products' },
     { href: 'about.html', label: '💛 About Us', id: 'about' },
     { href: 'contact.html', label: '📞 Contact', id: 'contact' },
-    { href: 'cart.html', label: '🛒 My Cart', id: 'cart' }
+    { href: 'cart.html', label: '🛒 My Cart', id: 'cart' },
+    { href: '#', label: '👤 My Account', id: 'account', action: 'onclick="event.preventDefault(); openAccountModal();"' }
   ];
 
   el.innerHTML = `
@@ -307,7 +314,7 @@ function renderMobileNav(activePage = '') {
       </div>
       <nav class="mobile-nav__links" role="navigation" aria-label="Mobile navigation">
         ${navLinks.map(link => `
-          <a href="${link.href}" class="mobile-nav__link ${activePage === link.id ? 'active' : ''}">
+          <a href="${link.href}" class="mobile-nav__link ${activePage === link.id ? 'active' : ''}" ${link.action || ''}>
             ${link.label}
           </a>
         `).join('')}
@@ -344,7 +351,7 @@ function renderFooter() {
       <div class="footer__top">
         <div class="footer__brand">
           <div class="footer__logo">
-            <img src="assets/images/logo.png" alt="Varsha Fancy Store" class="footer__logo-img" width="160" height="54" style="object-fit: contain; transform: scale(1.2); transform-origin: left center;" />
+            <img src="assets/store/logo.png" alt="Varsha Fancy Store" class="footer__logo-img" width="160" height="54" style="object-fit: contain; transform: scale(1.2); transform-origin: left center;" />
           </div>
           <p class="footer__desc">
             A 16-year legacy of bringing joy through beautiful ethnic accessories, sarees, and jewellery. 
@@ -507,7 +514,7 @@ function renderProductCard(product) {
 
   return `
     <article class="product-card" data-product-id="${product.id}" role="article">
-      <a href="product-detail.html?id=${product.id}" style="text-decoration:none;display:block">
+      <a href="product.html?id=${product.id}" style="text-decoration:none;display:block">
         <div class="product-card__image-wrap">
           <img 
             src="${product.image}" 
@@ -536,7 +543,7 @@ function renderProductCard(product) {
       </a>
       <div class="product-card__body">
         <div class="product-card__category">${product.category}</div>
-        <a href="product-detail.html?id=${product.id}" style="text-decoration:none">
+        <a href="product.html?id=${product.id}" style="text-decoration:none">
           <h3 class="product-card__name">${product.name}</h3>
         </a>
         <div class="product-card__rating">
@@ -660,6 +667,49 @@ function showConfirmDialog({ title, description, confirmLabel = 'Confirm', cance
 
   // Trap focus
   overlay.querySelector('#dialog-cancel').focus();
+}
+
+
+/* ─────────────────────────────────────────────
+   MY ACCOUNT MODAL
+───────────────────────────────────────────── */
+
+function openAccountModal() {
+  let overlay = document.getElementById('account-modal');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.id = 'account-modal';
+    overlay.className = 'modal-overlay';
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-modal', 'true');
+    overlay.innerHTML = `
+      <div class="modal" role="document">
+        <div class="modal__header">
+          <h2 class="modal__title">My Account</h2>
+          <button class="modal__close" onclick="closeAccountModal()" aria-label="Close dialog">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+        </div>
+        <p class="modal__desc">Welcome back! Since we process all secure orders directly over WhatsApp, your order history and tracking are securely available through your WhatsApp chat with us.</p>
+        <div class="modal__actions" style="justify-content: center; margin-top: var(--space-6);">
+          <a href="https://wa.me/${typeof STORE_INFO !== 'undefined' ? STORE_INFO.whatsapp : '919131902266'}?text=Hi! I want to check my order history." target="_blank" rel="noopener" class="btn btn-whatsapp" style="width: 100%; justify-content: center; gap: 8px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Track Orders on WhatsApp
+          </a>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeAccountModal(); });
+  }
+  requestAnimationFrame(() => overlay.classList.add('open'));
+}
+
+function closeAccountModal() {
+  const overlay = document.getElementById('account-modal');
+  if (overlay) overlay.classList.remove('open');
 }
 
 

@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Varsha Fancy Store — Chennai's most-loved fancy store for 16 years. Explore sarees, bangles, earrings, jewellery, and festive accessories at the best prices." />
   <meta name="keywords" content="varsha fancy store, sarees, bangles, earrings, jhumka, jewellery, chennai, t. nagar, fancy, ethnic accessories" />
-  <meta property="og:title" content="Varsha Fancy Store — 16 Years of Heritage" />
-  <meta property="og:description" content="Chennai's beloved fancy store for ethnic accessories, sarees, and jewellery." />
-  <meta property="og:type" content="website" />
+  
+  
+  
   <title>Varsha Fancy Store — 16 Years of Heritage | Chennai</title>
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/base.css" />
@@ -475,6 +475,23 @@
     @media (max-width: 1024px) { .why-us-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 640px) { .why-us-grid { grid-template-columns: 1fr 1fr; } }
   </style>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Varsha Fancy Store — 16 Years of Heritage">
+  <meta property="og:description" content="Chennai\'s most-loved fancy store for sarees, jewellery, bangles & ethnic accessories. Trusted since 2008.">
+  <meta property="og:image" content="https://shashwatpatil902266-collab.github.io/varsha-fancy/assets/og-image.jpg">
+  <meta property="og:url" content="https://shashwatpatil902266-collab.github.io/varsha-fancy/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Varsha Fancy Store">
+  <meta name="twitter:image" content="https://shashwatpatil902266-collab.github.io/varsha-fancy/assets/og-image.jpg">
+
 </head>
 <body>
   <!-- Announcement Bar -->
@@ -545,15 +562,15 @@
             </div>
             <div class="hero__image-grid">
               <div class="hero__img-card">
-                <img src="https://picsum.photos/seed/silk001/600/700" alt="Traditional Indian Sarees" width="600" height="700" />
+                <img src="assets/categories/saree_hero.png" alt="Traditional Indian Sarees" width="600" height="700" />
                 <span class="hero__img-label">Kanjivaram Sarees</span>
               </div>
               <div class="hero__img-card">
-                <img src="https://picsum.photos/seed/jhumka001/400/300" alt="Jhumka Earrings" width="400" height="300" />
+                <img src="assets/categories/jhumka_hero.png" alt="Jhumka Earrings" width="400" height="300" />
                 <span class="hero__img-label">Jhumkas</span>
               </div>
               <div class="hero__img-card">
-                <img src="https://picsum.photos/seed/bangle001/400/300" alt="Glass Bangles" width="400" height="300" />
+                <img src="assets/categories/bangle_hero.png" alt="Glass Bangles" width="400" height="300" />
                 <span class="hero__img-label">Bangles</span>
               </div>
             </div>
@@ -596,7 +613,10 @@
         </div>
         <div class="grid grid--4" id="featured-products">
           <!-- Skeleton while loading -->
-          ${Array(8).fill(0).map(() => `<div class="product-card"><div class="skeleton" style="aspect-ratio:1/1;border-radius: var(--radius-xl) var(--radius-xl) 0 0;"></div><div class="product-card__body"><div class="skeleton" style="height:12px;width:40%;margin-bottom:8px;border-radius:4px;"></div><div class="skeleton" style="height:16px;width:100%;margin-bottom:4px;border-radius:4px;"></div><div class="skeleton" style="height:16px;width:70%;margin-bottom:12px;border-radius:4px;"></div><div class="skeleton" style="height:38px;width:100%;border-radius:8px;"></div></div></div>`).join('')}
+          <div class="product-card" aria-busy="true"><div class="skeleton" style="aspect-ratio:1/1;border-radius: var(--radius-xl) var(--radius-xl) 0 0;"></div><div class="product-card__body"><div class="skeleton" style="height:12px;width:40%;margin-bottom:8px;border-radius:4px;"></div><div class="skeleton" style="height:16px;width:100%;margin-bottom:4px;border-radius:4px;"></div><div class="skeleton" style="height:16px;width:70%;margin-bottom:12px;border-radius:4px;"></div><div class="skeleton" style="height:38px;width:100%;border-radius:8px;"></div></div></div>
+          <div class="product-card" aria-busy="true"><div class="skeleton" style="aspect-ratio:1/1;border-radius: var(--radius-xl) var(--radius-xl) 0 0;"></div><div class="product-card__body"><div class="skeleton" style="height:12px;width:40%;margin-bottom:8px;border-radius:4px;"></div><div class="skeleton" style="height:16px;width:100%;margin-bottom:4px;border-radius:4px;"></div><div class="skeleton" style="height:16px;width:70%;margin-bottom:12px;border-radius:4px;"></div><div class="skeleton" style="height:38px;width:100%;border-radius:8px;"></div></div></div>
+          <div class="product-card" aria-busy="true"><div class="skeleton" style="aspect-ratio:1/1;border-radius: var(--radius-xl) var(--radius-xl) 0 0;"></div><div class="product-card__body"><div class="skeleton" style="height:12px;width:40%;margin-bottom:8px;border-radius:4px;"></div><div class="skeleton" style="height:16px;width:100%;margin-bottom:4px;border-radius:4px;"></div><div class="skeleton" style="height:16px;width:70%;margin-bottom:12px;border-radius:4px;"></div><div class="skeleton" style="height:38px;width:100%;border-radius:8px;"></div></div></div>
+          <div class="product-card" aria-busy="true"><div class="skeleton" style="aspect-ratio:1/1;border-radius: var(--radius-xl) var(--radius-xl) 0 0;"></div><div class="product-card__body"><div class="skeleton" style="height:12px;width:40%;margin-bottom:8px;border-radius:4px;"></div><div class="skeleton" style="height:16px;width:100%;margin-bottom:4px;border-radius:4px;"></div><div class="skeleton" style="height:16px;width:70%;margin-bottom:12px;border-radius:4px;"></div><div class="skeleton" style="height:38px;width:100%;border-radius:8px;"></div></div></div>
         </div>
         <div style="text-align:center; margin-top: var(--space-10)">
           <a href="products.html" class="btn btn-primary btn-lg">
@@ -614,7 +634,7 @@
       <div class="container">
         <div class="banners-row">
           <a href="products.html?cat=sarees" class="banner-card" aria-label="Shop Bridal Collection">
-            <img class="banner-card__img" src="https://picsum.photos/seed/bridal001/700/350" alt="Bridal Collection — Sarees and Jewellery" loading="lazy" width="700" height="350" />
+            <img class="banner-card__img" src="assets/categories/saree_hero.png" alt="Bridal Collection — Sarees and Jewellery" loading="lazy" width="700" height="350" />
             <div class="banner-card__content">
               <div class="banner-card__tag">🎊 Bridal Special</div>
               <div class="banner-card__title">Bridal Collection</div>
@@ -622,7 +642,7 @@
             </div>
           </a>
           <a href="products.html?tag=festive" class="banner-card" aria-label="Shop Navratri Collection">
-            <img class="banner-card__img" src="https://picsum.photos/seed/navratri/700/350" alt="Navratri Festive Wear Collection" loading="lazy" width="700" height="350" />
+            <img class="banner-card__img" src="assets/categories/bangle_hero.png" alt="Navratri Festive Wear Collection" loading="lazy" width="700" height="350" />
             <div class="banner-card__content">
               <div class="banner-card__tag">🎉 Festival Season</div>
               <div class="banner-card__title">Navratri Specials</div>
@@ -639,13 +659,13 @@
         <div class="story__inner">
           <div class="story__images" aria-hidden="true">
             <div class="story__img">
-              <img src="https://picsum.photos/seed/store1/500/700" alt="Varsha Fancy Store interior" loading="lazy" width="500" height="700" />
+              <img src="assets/store/store_interior.png" alt="Varsha Fancy Store interior" loading="lazy" width="500" height="700" />
             </div>
             <div class="story__img">
-              <img src="https://picsum.photos/seed/store2/400/300" alt="Happy customer at the store" loading="lazy" width="400" height="300" />
+              <img src="assets/store/store_interior.png" alt="Happy customer at the store" loading="lazy" width="400" height="300" />
             </div>
             <div class="story__img">
-              <img src="https://picsum.photos/seed/store3/400/300" alt="Store display of bangles and accessories" loading="lazy" width="400" height="300" />
+              <img src="assets/store/store_interior.png" alt="Store display of bangles and accessories" loading="lazy" width="400" height="300" />
             </div>
           </div>
           <div>
@@ -744,7 +764,7 @@
           </a>
         </div>
         <div style="position: relative; padding: var(--space-4);">
-          <img src="https://picsum.photos/seed/custom/600/500" alt="Bespoke Customized Products" loading="lazy" style="width: 100%; border-radius: var(--radius-2xl); box-shadow: var(--shadow-xl); aspect-ratio: 4/3; object-fit: cover;" />
+          <img src="assets/products/bag.png" alt="Bespoke Customized Products" loading="lazy" style="width: 100%; border-radius: var(--radius-2xl); box-shadow: var(--shadow-xl); aspect-ratio: 4/3; object-fit: cover;" />
           <div style="position: absolute; bottom: 0px; left: 0px; background: var(--color-bg); padding: var(--space-4) var(--space-6); border-radius: var(--radius-xl); box-shadow: var(--shadow-xl); border: 1px solid var(--color-border); display: flex; align-items: center; gap: 12px;">
             <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--color-gold-light); display: flex; align-items: center; justify-content: center; font-size: 24px;">✨</div>
             <div>
@@ -769,7 +789,7 @@
             <div class="testimonial-card__stars">★★★★★</div>
             <p class="testimonial-card__text">"I've been buying sarees from Varsha for 10 years now. The quality never disappoints and the prices are so reasonable. The Kanjivaram I wore for my daughter's wedding was absolutely stunning!"</p>
             <div class="testimonial-card__author">
-              <img class="testimonial-card__avatar" src="https://picsum.photos/seed/lady1/100/100" alt="Lakshmi Iyer" loading="lazy" width="44" height="44" />
+              <img class="testimonial-card__avatar" src="assets/store/logo.png" alt="Lakshmi Iyer" loading="lazy" width="44" height="44" />
               <div>
                 <div class="testimonial-card__name">Lakshmi Iyer</div>
                 <div class="testimonial-card__city">T. Nagar, Chennai</div>
@@ -780,7 +800,7 @@
             <div class="testimonial-card__stars">★★★★★</div>
             <p class="testimonial-card__text">"The bridal jewellery set I ordered was even more beautiful than the photos. My daughter looked like a queen on her wedding day. Thank you Varsha Store for making our family's dream come true!"</p>
             <div class="testimonial-card__author">
-              <img class="testimonial-card__avatar" src="https://picsum.photos/seed/lady2/100/100" alt="Meenakshi Ramesh" loading="lazy" width="44" height="44" />
+              <img class="testimonial-card__avatar" src="assets/store/logo.png" alt="Meenakshi Ramesh" loading="lazy" width="44" height="44" />
               <div>
                 <div class="testimonial-card__name">Meenakshi Ramesh</div>
                 <div class="testimonial-card__city">Mylapore, Chennai</div>
@@ -791,7 +811,7 @@
             <div class="testimonial-card__stars">★★★★☆</div>
             <p class="testimonial-card__text">"Best fancy store in Chennai! I always come here before every festival season. The bangles and pottu sets are amazing quality at very affordable prices. Strongly recommended!"</p>
             <div class="testimonial-card__author">
-              <img class="testimonial-card__avatar" src="https://picsum.photos/seed/lady3/100/100" alt="Priya Shankar" loading="lazy" width="44" height="44" />
+              <img class="testimonial-card__avatar" src="assets/store/logo.png" alt="Priya Shankar" loading="lazy" width="44" height="44" />
               <div>
                 <div class="testimonial-card__name">Priya Shankar</div>
                 <div class="testimonial-card__city">Anna Nagar, Chennai</div>

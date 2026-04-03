@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — Varsha Fancy Store</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Varsha Fancy Store — 16 Years of Heritage">
+  <meta property="og:description" content="Chennai's most-loved fancy store for sarees, jewellery, bangles & ethnic accessories.">
+  <meta property="og:image" content="https://shashwatpatil902266-collab.github.io/varsha-fancy/assets/og-image.jpg">
+  <meta property="og:url" content="https://shashwatpatil902266-collab.github.io/varsha-fancy/">
+  <meta property="og:type" content="website">
+
+  <style>
+    .error-page {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: var(--space-8);
+      background: var(--color-bg-subtle);
+    }
+    .error-content h1 {
+      font-size: 8rem;
+      font-family: var(--font-heading);
+      color: var(--color-primary);
+      margin-bottom: var(--space-4);
+      line-height: 1;
+      text-shadow: 2px 2px 0px rgba(0,0,0,0.05);
+    }
+    .error-content h2 {
+      font-size: var(--text-3xl);
+      color: var(--color-text-main);
+      margin-bottom: var(--space-4);
+    }
+    .error-content p {
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-8);
+      font-size: var(--text-lg);
+    }
+    .error-actions {
+      display: flex;
+      gap: var(--space-4);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Announcement Bar -->
+  <div class="announcement-bar" id="announcement-bar">
+    <div class="container announcement-bar__inner">
+      <span class="announcement-text"></span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="site-header"></header>
+  
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav" id="mobile-nav" aria-hidden="true"></div>
+
+  <!-- Main Content -->
+  <main class="error-page">
+    <div class="error-content">
+      <h1>404</h1>
+      <h2>Oops! Page not found</h2>
+      <p>The page you're looking for doesn't exist or has been moved.</p>
+      <div class="error-actions">
+        <a href="index.html" class="btn btn-primary">Back to Home</a>
+        <a href="products.html" class="btn btn-outline">Browse Products</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="site-footer"></footer>
+  
+  <div id="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/components.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initSharedComponents('');
+    });
+  </script>
+</body>
+</html>

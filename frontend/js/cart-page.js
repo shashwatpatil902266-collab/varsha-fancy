@@ -65,7 +65,7 @@ function renderCartItems(items) {
 
   container.innerHTML = items.map(item => `
     <div class="cart-row" data-uid="${item._uid}">
-      <a href="product-detail.html?id=${item.id}">
+      <a href="product.html?id=${item.id}">
         <img 
           class="cart-row__img" 
           src="${item.image}" 
@@ -75,7 +75,7 @@ function renderCartItems(items) {
         />
       </a>
       <div class="cart-row__body">
-        <a href="product-detail.html?id=${item.id}" style="text-decoration:none">
+        <a href="product.html?id=${item.id}" style="text-decoration:none">
           <div class="cart-row__name">${item.name}</div>
         </a>
         <div class="cart-row__variant">
